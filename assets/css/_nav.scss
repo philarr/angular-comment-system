@@ -1,0 +1,20 @@
+nav {
+    @include clearfix();
+    padding-bottom: 1rem;
+    min-height: 4rem;
+    .logo {
+        padding: 1rem 0;
+        float: left;
+        color: $primary-color;
+    }
+    .new-article {
+        padding: 1rem 0;
+        a {
+            min-height: auto;
+            font-size: 1rem;
+            padding: 1rem;
+            float: right;
+            line-height: 1em;
+        }         
+    }
+}

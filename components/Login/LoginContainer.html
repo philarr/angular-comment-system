@@ -1,0 +1,2 @@
+<login-form ng-if="!$ctrl.isAuthed" text="$ctrl.text" post="$ctrl.login()" is-sending="$ctrl.isSending"></login-form>
+<ng-transclude ng-if="$ctrl.isAuthed"></ng-transclude>

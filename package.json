@@ -1,0 +1,42 @@
+{
+  "name": "cc-philip_chung-comment_system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-loader": "^0.4.4",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "webpack-dev-server --host 0.0.0.0 --port 8080",
+    "start": "node ./server.js",
+    "build": "webpack -p -config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/routific/cc-philip_chung-comment_system.git"
+  },
+  "author": "Philip Chung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/routific/cc-philip_chung-comment_system/issues"
+  },
+  "homepage": "https://github.com/routific/cc-philip_chung-comment_system#readme"
+}

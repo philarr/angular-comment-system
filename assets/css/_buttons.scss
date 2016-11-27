@@ -1,0 +1,37 @@
+.button {
+    transition: background-color 350ms;
+    text-align: center;
+    margin: 0;
+    border-radius: 5px;
+    line-height: 4rem;
+    min-height: 4rem;
+    color: #fff;
+    .loading {
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;        
+    }
+}
+
+.button-submit {
+    height: 100%;
+    background-color: $primary-color;
+    border-bottom: 2px solid #3d79db;
+    &:hover {
+        background-color: $primary-color-hover;
+    }
+    &:active {
+        background-color: $primary-color-active;
+    }
+}
+.button-login {
+    background-color: $invert-color;
+    border-bottom: 2px solid #c1251f;
+    &:hover {
+        background-color: $invert-color-hover;
+    }
+    &:active {
+        background-color: $invert-color-active;
+    }
+}

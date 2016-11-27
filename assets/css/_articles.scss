@@ -1,0 +1,46 @@
+.articles {
+    width: 100%;
+    padding: 0;
+    .articles-header {
+        @include clearfix();
+        margin: 0;
+        background-color: $secondary-color;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 2px solid #d0d0d0;
+        transition: background-color 350ms;
+        &.active {
+            background-color: #fff;
+        }
+        &:hover {
+            background-color: #fff;
+        }
+    }
+ 
+    .articles-comments,
+    .articles-url {
+        color: #b0b0b0;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+    .articles-meta {
+        height: 100%;
+        overflow: hidden;
+    }
+    .articles-url {
+        float: left;
+    }
+    .articles-comments {
+        float: right;
+    }
+
+    .articles-desc {
+        margin-top: 1rem;
+        border-top: 2px solid #efefef;
+        color: #a0a0a0;
+        font-size: 0.9rem;
+        padding: 1rem;
+        overflow:hidden;
+        white-space: pre-wrap;
+    }
+}

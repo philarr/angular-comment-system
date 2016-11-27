@@ -1,0 +1,11 @@
+<div class="form">
+    <div class="form-input">
+      <textarea placeholder="write comment..." data-ng-model="$ctrl.text"></textarea>
+    </div>
+    <div class="form-button">
+        <div data-ng-click="$ctrl.post()" class="button button-submit">
+            <div data-ng-if="$ctrl.isSending" class="loading"></div>
+            <span data-ng-if="!$ctrl.isSending">Send</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="form">
+    <div class="form-input">
+        <input placeholder="Article title" data-ng-model="$ctrl.title" type="text" />
+        <input placeholder="Article URL" data-ng-model="$ctrl.url" type="text" />
+    </div>
+    <div class="form-textarea">
+        <textarea placeholder="Article description" data-ng-model="$ctrl.desc"></textarea>
+    </div>
+    <div class="form-button">
+        <div data-ng-click="$ctrl.post()" class="button button-submit">
+            <div data-ng-if="$ctrl.isSending" class="loading"></div>
+            <span data-ng-if="!$ctrl.isSending">Create</span>
+        </div>
+    </div>
+</div>

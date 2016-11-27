@@ -1,0 +1,36 @@
+$primary-color: #4A90E2;
+$primary-color-hover: #68AEFF;
+$primary-color-active: #80BBFF;
+$invert-color: #e2504a;
+$invert-color-hover: #e66560;
+$invert-color-active: #e97b76;
+$secondary-color: #f0f0f0;
+
+$pad: '768px';
+$desktop: '1024px';
+
+
+@mixin clearfix() {
+    &:after {
+     display: block;
+     content: " ";
+     clear: both;
+    }
+}
+
+@import 'normalize.css';
+@import 'animate';
+@import 'global';
+@import 'nav';
+@import 'form';
+@import 'buttons';
+@import 'scoring';
+@import 'articles';
+@import 'comments';
+@import 'modal';
+
+ 
+
+
+   
+   

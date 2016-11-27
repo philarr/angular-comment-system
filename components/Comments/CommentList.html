@@ -1,0 +1,13 @@
+<div class="comments">
+    <ul>
+        <div data-ng-if="!$ctrl.comments && $ctrl.comments.length !== 0" class="loading"></div>
+        <div data-ng-if="$ctrl.comments.length === 0" class="comments-none">It's quiet in here...</div>
+        <li data-ng-repeat="comment in $ctrl.comments track by $index">
+            <div class="comments-avatar">{{  ::comment.user.substr(0, 1) }}</div>
+            <div class="comments-content">
+                <h5>{{ ::comment.user }}</h5>
+                <p>{{ ::comment.content }}</p>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,11 @@
+<div class="form">
+    <div class="form-input">
+      <input placeholder="Pick a display name" data-ng-model="$ctrl.text" type="text" />
+    </div>
+    <div class="form-button">
+        <div data-ng-click="$ctrl.post()" class="button button-login">
+            <div data-ng-if="$ctrl.isSending" class="loading"></div>
+            <span data-ng-if="!$ctrl.isSending">Login</span>
+        </div>
+    </div>
+</div>

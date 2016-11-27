@@ -1,0 +1,124 @@
+ {
+    "comments": [
+        {
+            "parentId": 1,
+            "comments": []
+        },
+        {
+            "parentId": 2,
+            "comments": [
+                {   
+                    "id": 1,
+                    "user": "John",
+                    "content": "I love this article. Awesome"
+                },
+                {
+                    "id": 2,
+                    "user": "John",
+                    "content": "Super cool. I would love to read more about this"
+                },
+                {
+                    "id": 3,
+                    "user": "John",
+                    "content": "I love this article. Awesome. I love this article. Awesome. I love this article. Awesome. I love this article. Awesome. I love this article. Awesome."
+                },
+                {
+                    "id": 4,
+                    "user": "John",
+                    "content": "Super cool. I would love to read more about this"
+                }  
+            ]
+        },
+        {
+            "parentId": 3,
+            "comments": [
+                {   
+                    "id": 1,
+                    "user": "John",
+                    "content": "I love this article. Awesome"
+                },
+                {
+                    "id": 2,
+                    "user": "John",
+                    "content": "Super cool. I would love to read more about this"
+                },
+                {
+                    "id": 3,
+                    "user": "John",
+                    "content": "I love this article. Awesome. I love this article. Awesome. I love this article. Awesome. I love this article. Awesome. I love this article. Awesome."
+                },
+                {
+                    "id": 4,
+                    "user": "John",
+                    "content": "Super cool. I would love to read more about this"
+                },
+                {   
+                    "id": 5,
+                    "user": "John",
+                    "content": "I love this article. Awesome"
+                },
+                {
+                    "id": 6,
+                    "user": "John",
+                    "content": "Super cool. I would love to read more about this"
+                },
+                {
+                    "id": 7,
+                    "user": "John",
+                    "content": "I love this article. Awesome. I love this article. Awesome. I love this article. Awesome. I love this article. Awesome. I love this article. Awesome."
+                },
+                {
+                    "id": 8,
+                    "user": "John",
+                    "content": "Super cool. I would love to read more about this"
+                } 
+            ]
+        },
+        {
+            "parentId": 4,
+            "comments": [
+                {   
+                    "id": 1,
+                    "user": "John",
+                    "content": "I love this article. Awesome"
+                },
+                {
+                    "id": 2,
+                    "user": "John",
+                    "content": "Super cool. I would love to read more about this"
+                },
+                {
+                    "id": 3,
+                    "user": "John",
+                    "content": "I love this article. Awesome. I love this article. Awesome. I love this article. Awesome. I love this article. Awesome. I love this article. Awesome."
+                },
+                {
+                    "id": 4,
+                    "user": "John",
+                    "content": "Super cool. I would love to read more about this"
+                },
+                {   
+                    "id": 5,
+                    "user": "John",
+                    "content": "I love this article. Awesome"
+                },
+                {
+                    "id": 6,
+                    "user": "John",
+                    "content": "Super cool. I would love to read more about this"
+                },
+                {
+                    "id": 7,
+                    "user": "John",
+                    "content": "I love this article. Awesome. I love this article. Awesome. I love this article. Awesome. I love this article. Awesome. I love this article. Awesome."
+                },
+                {
+                    "id": 8,
+                    "user": "John",
+                    "content": "Super cool. I would love to read more about this"
+                } 
+            ]
+        }
+    ]
+ }
+  

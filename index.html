@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>CommApp</title>
+    <link rel="stylesheet" type="text/css" href="/dist/app.css" />  
+</head>
+<body ng-app="app">
+<main data-ng-controller="appController as app">
+    <nav>
+        <h1 class="logo">&#128172; <a data-ng-href="/">CommApp</a></h1> 
+        <div class="new-article"><a data-ng-href="/?create" class="button button-submit">Create article</a></div>
+    </nav>
+    <div data-ng-view></div>
+    <modal-box data-ng-if="app.modal.show" data-type="app.modal.type"></modal-box>
+</main>
+<script type="text/javascript" src="/dist/bundle.js"></script>
+</body>
+</html>

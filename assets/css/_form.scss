@@ -1,0 +1,67 @@
+.form {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    animation-name: fadeInUp;
+    animation-duration: 700ms;    
+    display: table;
+
+    textarea, input {
+        width: 100%;
+        border: 0;  
+        border-radius: 5px;
+        min-height: 4rem;
+        font-family: 'Arial';
+        padding: 1rem;
+        border-bottom: 2px solid #d0d0d0;
+    }
+ 
+    .form-input,
+    .form-textarea,
+    .form-button {
+        vertical-align: top;
+    }
+
+    .form-input {
+       padding: 0.5rem;
+    }
+    
+    .form-textarea {
+        padding: 0.5rem;
+        &:first-of-type {
+           display: table-cell;
+        } 
+    }
+    .form-button {
+        padding: 0.5rem;
+        min-width: 6rem;
+        &:nth-of-type(2n) {
+           display: table-cell;
+        } 
+    }
+
+    @media only screen and (min-width: $pad) {
+        .form-input {
+            display: table-cell;
+        } 
+        .form-textarea {
+            display: table-cell;
+            width: 50%;
+            &:nth-of-type(2n) {
+                textarea {
+                    height: 8rem;
+                }
+            } 
+        }
+        .form-button {
+            display: table-cell;
+            max-width: 8rem;
+            &:nth-of-type(3n) {
+                > .button {
+                    line-height: 8rem;
+                    height: 8rem;
+                }
+            } 
+        }
+    }
+}
+
