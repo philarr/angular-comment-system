@@ -1,15 +1,15 @@
 <ul class="articles">
     <li ng-repeat="article in $ctrl.articles track by article.id">
-        <article id="{{::article.id}}" class="articles-header" data-ng-class="{ active: $ctrl.viewingId == article.id }">
+        <article class="articles-header" data-ng-class="{ active: $ctrl.viewingId === article.id }">
             <score-container score="article.score"></score-container>
             <div class="articles-meta">
                 <h4><a data-ng-href="/?id={{ ::article.id }}">{{ ::article.title }}</a></h4>
                 <a href="http://{{ ::article.url }}" class="articles-url">{{ ::article.url }}</a>
                 <a data-ng-href="/?id={{ ::article.id }}" class="articles-comments">{{ article.numComments }} comments</a>
             </div>
-            <p data-ng-if="$ctrl.viewingId === article.id" class="articles-desc" data-ng-bind="::article.desc || 'No description'"></p>
+            <p class="articles-desc" data-ng-bind="::article.desc || 'No description'"></p>
         </article>
-        <ng-transclude data-ng-if="$ctrl.viewingId === article.id" ></ng-transclude>
+        <ng-transclude data-ng-if="$ctrl.viewingId === article.id"></ng-transclude>
     </li>
 </ul>
  

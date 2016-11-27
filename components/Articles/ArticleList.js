@@ -1,7 +1,7 @@
 export default {
     transclude: true,
     bindings: {
-        viewingId: '<?',
+        viewingId: '<',
         articles: '<',
         incrementComment: '&'
     },
