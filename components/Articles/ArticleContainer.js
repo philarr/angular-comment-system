@@ -52,9 +52,9 @@ export default {
                 }
             });
         }
-
+        
         function updateViewingId() {
-            vm.viewingId = $location.search().id;
+            vm.viewingId = parseInt($location.search().id);
             vm.showCreateForm = $location.search().create;
         }
     }]

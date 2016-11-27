@@ -4,11 +4,8 @@ export default {
     controller: ['$scope', '$rootScope', 'Auth', function ($scope, $rootScope, Auth) {
         const vm = this;
         vm.isAuthed = Auth.isAuthed();
-
-        vm.$onInit = () => {
-            vm.text = "";
-            vm.isSending = false;
-        };
+        vm.isSending = false;
+        vm.text = "";
 
         vm.login = () => {
             if (vm.text.length === 0) {
@@ -18,9 +15,9 @@ export default {
             vm.isSending = true;
             Auth.auth(vm.text).then( result => {
                 $scope.$apply(() => {
+                    vm.isAuthed = true;
                     vm.isSending = false;
                     vm.text = "";
-                    vm.isAuthed = true;
                 });
             });
         }

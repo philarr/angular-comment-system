@@ -1,16 +1,18 @@
 export default {
     bindings: {
-        parentId: '<',
+        viewingId: '<',
         incrementComment: '&'
     },
     template: require('./CommentContainer.html'),
     controller: ['$scope', '$rootScope', 'API', function ($scope, $rootScope, API) {
 
         const vm = this;
+        vm.isSending = false;
+        vm.comments = false;
+        vm.text = "";
+
         vm.$onInit = () => {
-            vm.text = "";
-            vm.isSending = false;
-            API.getComments(vm.parentId).then( result => {
+            API.getComments(vm.viewingId).then( result => {
                 $scope.$apply(() => {
                     vm.comments = result.comments;
                 });
@@ -23,9 +25,9 @@ export default {
                  return;
             }
             vm.isSending = true;
-            API.postComment(vm.parentId, vm.text).then( result => {
+            API.postComment(vm.viewingId, vm.text).then( result => {
                 if (result) {
-                    if (vm.incrementComment) vm.incrementComment({ id : { id: vm.parentId } });
+                    if (vm.incrementComment) vm.incrementComment({ id: vm.viewingId });
                     $scope.$apply(() => {
                         vm.comments = result.comments;
                         vm.isSending = false;

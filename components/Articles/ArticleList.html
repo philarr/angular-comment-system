@@ -7,9 +7,9 @@
                 <a href="http://{{ ::article.url }}" class="articles-url">{{ ::article.url }}</a>
                 <a data-ng-href="/?id={{ ::article.id }}" class="articles-comments">{{ article.numComments }} comments</a>
             </div>
-            <p data-ng-if="$ctrl.viewingId == article.id" class="articles-desc" data-ng-bind="::article.desc || 'No description'"></p>
+            <p data-ng-if="$ctrl.viewingId === article.id" class="articles-desc" data-ng-bind="::article.desc || 'No description'"></p>
         </article>
-        <comment-container data-ng-if="$ctrl.viewingId == article.id" data-parent-id="article.id" data-increment-comment="$ctrl.incrementComment(id)"></comment-container>
+        <ng-transclude data-ng-if="$ctrl.viewingId === article.id" ></ng-transclude>
     </li>
 </ul>
  
