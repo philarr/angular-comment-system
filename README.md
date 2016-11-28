@@ -16,6 +16,8 @@ node ./server.js
 ```
 index.html script and link tags will need to be accessing webpack-dev-server at localhost:8080/dist/*
 
+____
+
 ## Structure
 
 
@@ -33,13 +35,14 @@ index.html script and link tags will need to be accessing webpack-dev-server at 
  - Uses Auth service for conditional rendering of login-form or transcluded component
  - Handles user input and posting from login-form.
  
-
+======
+ 
 ### Presentational
 - Components with all the CSS styling.
 - Should only contain minimal/presentational logic.
 - Data fetching should be in container and passed to these components as props.
 
-
+======
 
 ### Services
 
