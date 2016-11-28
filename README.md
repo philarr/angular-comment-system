@@ -5,6 +5,7 @@ Some sort of reddit clone built with Angular 1.5.8
 
 ####Production
 ```
+npm install
 npm run build
 npm start
 ```
@@ -14,7 +15,7 @@ npm start
 npm run dev-server
 node ./server.js
 ```
-index.html script and link tags will need to be accessing webpack-dev-server at localhost:8080/dist/*
+*index.html script and link tags will need to be accessing webpack-dev-server at localhost:8080/dist/*
 
 ____
 
