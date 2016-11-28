@@ -2,8 +2,7 @@ export default {
     transclude: true,
     bindings: {
         viewingId: '<',
-        articles: '<',
-        incrementComment: '&'
+        articles: '<'
     },
     template: require('./ArticleList.html')
 }
