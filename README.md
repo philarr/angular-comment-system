@@ -1,6 +1,21 @@
 # angular-comment-system
 Some sort of reddit clone built with Angular 1.5.8
 
+### Installation
+
+####Production
+```
+npm run build
+npm start
+```
+
+####Development
+```
+npm run dev-server
+node ./server.js
+```
+index.html script and link tags will need to be accessing webpack-dev-server at localhost:8080/dist/*
+
 ### Containers
 
 - ArticleContainer
