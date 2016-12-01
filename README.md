@@ -2,7 +2,7 @@
 Reddit clone built with Angular 1.5.8
 
 ![Image of front page]
-(http://pmhc.co/images/newsapp/1.png)
+(http://pmhc.co/images/newsapp/1.png?1)
 
 ### Installation
 
