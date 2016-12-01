@@ -60,3 +60,15 @@ ____
 - Auth.js
  - Should only be injected to authorization components.
  - Other components should call API directly instead of checking auth state by itself.
+
+____
+
+## Todos
+ 
+- [ ] Refactor presentational components
+- [ ] Article filtering and sort options
+- [ ] Global auth service
+- [ ] User settings service
+
+In the future?
+- [ ] Back-end
