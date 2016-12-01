@@ -1,5 +1,8 @@
 # angular-comment-system
-Some sort of reddit clone built with Angular 1.5.8
+Reddit clone built with Angular 1.5.8
+
+![Image of front page]
+(http://pmhc.co/images/newsapp/1.png)
 
 ### Installation
 
