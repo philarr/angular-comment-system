@@ -1,10 +1,14 @@
 # angular-comment-system
-Some sort of reddit clone built with Angular 1.5.8
+Reddit clone built with Angular 1.5.8
+
+![Image of front page]
+(http://pmhc.co/images/newsapp/1.png?2)
 
 ### Installation
 
 ####Production
 ```
+npm install
 npm run build
 npm start
 ```
@@ -14,7 +18,7 @@ npm start
 npm run dev-server
 node ./server.js
 ```
-index.html script and link tags will need to be accessing webpack-dev-server at localhost:8080/dist/*
+*index.html script and link tags will need to be accessing webpack-dev-server at localhost:8080/dist/*
 
 ____
 
@@ -56,3 +60,15 @@ ____
 - Auth.js
  - Should only be injected to authorization components.
  - Other components should call API directly instead of checking auth state by itself.
+
+____
+
+## Todos
+ 
+- [ ] Refactor presentational components
+- [ ] Article filtering and sort options
+- [ ] Global auth service
+- [ ] User settings service
+
+In the future?
+- [ ] Back-end
