@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    content: __dirname  + '/',
+    context: __dirname  + '/',
     entry: [
         'babel-polyfill',
         './app.js'
@@ -46,6 +46,10 @@ module.exports = {
                 loader: 'json', 
                 exclude: [/node_modules/]
             },
+            { test: /\.png$/, loader: "file-loader" },
+            { test: /\.jpg$/, loader: "file-loader" },
+            { test: /\.woff$/, loader: "file-loader" },
+            { test: /\.otf$/, loader: "file-loader" }
         ]
     },
 }

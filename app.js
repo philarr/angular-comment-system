@@ -4,53 +4,32 @@ import './assets/css/app.scss';
 import angular from 'angular';
 import ngRoute from 'angular-route';
 
-// Services
-import API from './services/API.js';
-import Articles from './services/Articles.js';
-import Comments from './services/Comments.js';
-import Auth from './services/Auth.js';
-
-// Components
-import loginContainer from './components/Login/LoginContainer.js';
-import articleContainer from './components/Articles/ArticleContainer.js';
-import commentContainer from './components/Comments/CommentContainer.js';
-import scoreContainer from './components/Score/ScoreContainer.js';
- 
-// Presentational
-import modalBox from './components/Modal/ModalBox.js';
-import articleList from './components/Articles/ArticleList.js';
-import articleForm from './components/Articles/ArticleForm.js';
-import commentList from './components/Comments/CommentList.js';
-import commentForm from './components/Comments/CommentForm.js';
-import loginForm from './components/Login/LoginForm.js';
-
-
 angular.module('app', ['ngRoute'])
 
  // Services
-.service('Articles', Articles)
-.service('Comments', Comments)
-.service('API', API)
-.service('Auth', Auth)
+.service('Articles', require('./services/Articles.js').default)
+.service('Comments', require('./services/Comments.js').default)
+.service('API', require('./services/API.js').default)
+.service('Auth', require('./services/Auth.js').default)
 
  // Components
-.component('loginContainer', loginContainer)
-.component('articleContainer', articleContainer)
-.component('scoreContainer', scoreContainer)
-.component('commentContainer', commentContainer)
+.component('loginContainer', require('./components/Login/LoginContainer.js').default)
+.component('articleContainer', require('./components/Articles/ArticleContainer.js').default)
+.component('scoreContainer', require('./components/Score/ScoreContainer.js').default)
+.component('commentContainer', require('./components/Comments/CommentContainer.js').default)
 
 // Presentational
-.component('modalBox',  modalBox)
-.component('articleList', articleList)
-.component('articleForm', articleForm)
-.component('commentList', commentList)
-.component('commentForm', commentForm)
-.component('loginForm', loginForm)
+.component('modalBox',  require('./components/Modal/ModalBox.js').default)
+.component('articleList', require('./components/Articles/ArticleList.js').default)
+.component('articleForm', require('./components/Articles/ArticleForm.js').default)
+.component('commentList', require('./components/Comments/CommentList.js').default)
+.component('commentForm', require('./components/Comments/CommentForm.js').default)
+.component('loginForm', require('./components/Login/LoginForm.js').default)
 
 .config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {
     $routeProvider
-      .when('/', {
+      .when('/:topic?', {
         template: '<article-container></article-container>',
         reloadOnSearch: false
       })
@@ -59,6 +38,7 @@ angular.module('app', ['ngRoute'])
 
 .controller('appController', ['$scope', '$rootScope', function($scope, $rootScope) {
     const vm = this;
+    vm.isAuth = false;
     vm.modal = {
         show: false,
         type: ''

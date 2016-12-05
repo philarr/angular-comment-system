@@ -26,10 +26,10 @@ export default ['Articles', 'Comments', 'Auth', (Articles, Comments, Auth) => {
                 return Promise.resolve(false);
             }
         },
-        getArticles: (articleId) => {
+        getArticles: (topicName) => {
              return new Promise((resolve, reject) => {
                 const addCommentNums = Articles
-                .get(articleId)
+                .get()
                 .map( item => Object.assign(item, { numComments: Comments.get(item.id).comments.length }) );
                 setTimeout(() => {
                     resolve(addCommentNums);

@@ -6,12 +6,18 @@
     line-height: 4rem;
     min-height: 4rem;
     color: #fff;
+    margin-left: 0.5rem;
+    &:hover {
+        color: #fff;
+    }
     .loading {
         margin: 0;
         display: inline-block;
         vertical-align: middle;
         text-align: center;        
     }
+
+
 }
 
 .button-submit {

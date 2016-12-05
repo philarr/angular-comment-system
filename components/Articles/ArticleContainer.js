@@ -1,13 +1,19 @@
 export default {
+    bindings: {
+        filter: '<'
+    },
     template: require('./ArticleContainer.html'),
-    controller: ['$scope', '$rootScope', '$location', 'API', function ($scope, $rootScope, $location, API) {
+    controller: ['$scope', '$rootScope', '$location', 'API', '$routeParams', function ($scope, $rootScope, $location, API, $routeParams) {
         const vm = this;
         let listener = null;
         vm.isSending = false; 
         vm.title = "";
         vm.url = "";
         vm.desc = "";
-
+        vm.showTopic = false;
+        vm.showCreateForm = false;
+        vm.topicName = $routeParams.topic;
+ 
         vm.$onInit = () => {
             API.getArticles().then( result => {
                  $scope.$apply(() => {
@@ -15,6 +21,7 @@ export default {
                     updateViewingId();
                  });
             });
+ 
             listener = $scope.$on('$routeUpdate', updateViewingId);
         }
 
@@ -55,7 +62,6 @@ export default {
         
         function updateViewingId() {
             vm.viewingId = parseInt($location.search().id);
-            vm.showCreateForm = $location.search().create;
         }
     }]
 }

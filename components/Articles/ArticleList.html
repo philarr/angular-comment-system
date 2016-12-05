@@ -1,15 +1,43 @@
-<ul class="articles">
-    <li ng-repeat="article in $ctrl.articles track by article.id">
-        <article class="articles-header" data-ng-class="{ active: $ctrl.viewingId === article.id }">
-            <score-container score="article.score"></score-container>
-            <div class="articles-meta">
-                <h4><a data-ng-href="/?id={{ ::article.id }}">{{ ::article.title }}</a></h4>
-                <a href="http://{{ ::article.url }}" class="articles-url">{{ ::article.url }}</a>
-                <a data-ng-href="/?id={{ ::article.id }}" class="articles-comments">{{ article.numComments }} comments</a>
-            </div>
-            <p class="articles-desc" data-ng-bind="::article.desc || 'No description'"></p>
-        </article>
-        <ng-transclude data-ng-if="$ctrl.viewingId === article.id"></ng-transclude>
-    </li>
-</ul>
+<div class="content">
+    <ul class="articles">
+        <li ng-repeat="article in $ctrl.articles track by article.id">
+            <article class="articles-header" data-ng-class="{ active: $ctrl.viewingId === article.id }">
+                <div class="articles-type">
+                    <score-container score="article.score"></score-container>
+                    <div class="articles-meta">
+                        <a data-ng-href="/{{ ::$ctrl.topicName }}?id={{ ::article.id }}" class="articles-title">{{ ::article.title }}</a>
+                        <a href="http://{{ ::article.url }}" class="articles-url">{{ ::article.url }}</a>
+                        <a data-ng-href="/{{ ::$ctrl.topicName }}?id={{ ::article.id }}" class="articles-comments">{{ article.numComments }} comments</a>
+                    </div>
+                    <div class="articles-desc">
+                        <p data-ng-bind="::article.desc || 'No description'"></p>
+                    </div>
+                </div>
+            </article>
+            <ng-transclude data-ng-if="$ctrl.viewingId === article.id"></ng-transclude>
+        </li>
+    </ul>
+    <div class="articles-filter">
+       <div class="articles-filter-option">
+            <div class="articles-title"><i class="material-icons">description</i> About <span>{{ ::$ctrl.topicName || 'general' }}</span></div>
+            <p>
+Travel is the movement of people between relatively distant geographical locations, and can involve travel by foot, bicycle, automobile, train, boat, airplane, or other means, with or without luggage, and can be one way or round trip.Travel can also include relatively short stays between successive movements.
+
+            </p>
+        </div>
+        <div class="articles-filter-option">
+            <div class="articles-title"> <i class="material-icons">sort</i> Sort by</div>
+            <h5>Highest Score</h5>
+            <h5>Comments</h5>
+            <h5>Date Added</h5>
+        </div>
+        <div class="articles-filter-option">
+            <div class="articles-title"><i class="material-icons">remove_red_eye</i> Recently viewed</div>
+            <h5>The Bengal tiger is found primarily in India with smaller populations.</h5>
+            <h5>The Bengal tiger is found primarily in India with smaller populations.</h5>
+            <h5>The Bengal tiger is found primarily in India with smaller populations.</h5>
+        </div>
+    </div>
+
+</div>
  

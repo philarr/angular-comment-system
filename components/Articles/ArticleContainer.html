@@ -1,8 +1,50 @@
-<login-container data-ng-if="$ctrl.showCreateForm">
-    <article-form data-title="$ctrl.title" data-url="$ctrl.url" data-desc="$ctrl.desc" data-is-sending="$ctrl.isSending" data-post="$ctrl.post()"></article-form>
-</login-container>
-<article-list data-viewing-id="$ctrl.viewingId" data-articles="$ctrl.articles">
-    <comment-container  data-viewing-id="$ctrl.viewingId" data-increment-comment="$ctrl.incrementComment(id)"></comment-container>
-</article-list>
+<div class="nav nav-secondary">
+    <div class="wrapper">
+        <div class="topic">
+            <h1 data-ng-click="$ctrl.showTopic = !$ctrl.showTopic">{{ ::$ctrl.topicName || 'General'}} <i class="material-icons">expand_more</i></h1>
+        </div>
+        <div class="menu">
+             <a data-ng-click="$ctrl.showCreateForm = !$ctrl.showCreateForm" class="button button-submit"><i class="material-icons">add</i> New Article</a>
+        </div>
+        <div  class="nav-select">
+            <div class="topics"><a ng-href="/world">World</a></div>
+            <div class="topics"><a ng-href="/science">Science</a></div>
+            <div class="topics"><a ng-href="/finance">Finance</a></div>
+            <div class="topics"><a ng-href="/travel">Travel</a></div>
+            <div class="topics"><a ng-href="/food">Food</a></div>
+        </div>
+ 
+    <login-container data-ng-if="$ctrl.showCreateForm">
+        <article-form data-title="$ctrl.title" data-url="$ctrl.url" data-desc="$ctrl.desc" data-is-sending="$ctrl.isSending" data-post="$ctrl.post()"></article-form>
+    </login-container>
+ 
 
+    </div>
+</div>
+
+    <div class="articles-top">
+
+        <div class="articles-top-wrapper">
+            <div class="wrapper">
+            <div class="articles-top-content">
+                 <score-container score="432"></score-container>
+                 <div class="articles-meta">
+                    <h1>The Bengal tiger is found primarily in India with smaller populations.</h1>
+   
+                    <a href="http://{{ ::article.url }}" class="articles-url">www.wildlife.com/bengal-tiger</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a data-ng-href="/{{ ::$ctrl.topicName }}?id={{ ::article.id }}" class="articles-comments">0 comments</a>
+                </div>
+            </div>
+    
+            </div>
+        </div>
+
+    </div>
+
+ 
+    <article-list data-topic-name="$ctrl.topicName" data-viewing-id="$ctrl.viewingId" data-articles="$ctrl.articles">
+        <comment-container data-viewing-id="$ctrl.viewingId" data-increment-comment="$ctrl.incrementComment(id)"></comment-container>
+    </article-list>
+ 
 

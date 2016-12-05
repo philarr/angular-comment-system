@@ -1,11 +1,14 @@
 .articles {
-    width: 100%;
+    display: table-cell;
     padding: 0;
+
+    .articles-type {
+        padding: 1.5rem;
+    }
     .articles-header {
         @include clearfix();
         margin: 0;
-        background-color: $secondary-color;
-        padding: 1rem;
+        background-color: #fff;
         margin-bottom: 0.5rem;
         border-bottom: 2px solid #d0d0d0;
         transition: background-color 350ms;
@@ -19,31 +22,123 @@
             background-color: #fff;
         }
     }
+
     .articles-comments,
     .articles-url {
         color: #b0b0b0;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         margin-top: 0.5rem;
     }
-    .articles-meta {
-        height: 100%;
-        overflow: hidden;
-    }
-    .articles-url {
-        float: left;
-    }
-    .articles-comments {
-        float: right;
-    }
+}
+
 
     .articles-desc {
         display: none;
         margin-top: 1rem;
         border-top: 2px solid #efefef;
-        color: #a0a0a0;
-        font-size: 0.9rem;
         padding: 1rem;
         overflow: hidden;
-        white-space: pre-wrap;
+        p {
+            white-space: pre-wrap;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+            line-height: 1.6rem;
+            max-width: 900px;
+        }
     }
+
+.articles-meta {
+    height: 100%;
+    overflow: hidden;
+}
+.articles-title {
+    font-size: 1.2rem;
+    color: #272727;
+    display: block;
+}
+.articles-url {
+    float: left;
+}
+.articles-comments {
+    float: right;
+}
+
+.articles-top {
+    background-image: url('../img/sample.jpg');
+    border-bottom: 4px solid rgba(0,0,0,0.8);
+    background-size: cover;
+
+    .articles-top-wrapper {
+        padding: 5rem 0 8rem;
+        background-color: rgba(0,0,0,0.65);
+    }
+
+    .articles-top-content {
+        animation-name: fadeInUp;
+        animation-duration: 700ms;
+        animation-fill-mode: both;
+        padding: 1rem;
+    }
+    .scoring-up i {
+         font-size: 2rem;
+    }
+    .scoring {
+        font-size: 2rem;
+ 
+    }
+
+    .articles-meta {
+ 
+    }
+    h1 {
+        font-weight: 200;
+        font-size: 3rem;
+        color: #ffffff;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+    }
+}
+
+.articles-filter {
+    vertical-align: top;
+    padding: 0 1rem;
+    display: table-cell;
+    width: 300px;
+    .articles-filter-option {
+        padding: 1rem;
+        background-color: #fff;
+        margin-bottom: 0.5rem;
+        border-bottom: 2px solid #d0d0d0;
+        
+        border-top: 2px solid #efefef;
+
+        .articles-title {
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #efefef;
+            margin-bottom: 1rem;
+            span:first-letter {
+                text-transform:capitalize;
+            }
+        }
+ 
+        p {
+            width: 300px;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+            line-height: 1.6em;
+        }
+        h5 {
+            font-weight: normal;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;    
+            width: 300px;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+            line-height: 2rem;
+        }
+    }
+
+ 
+
 }

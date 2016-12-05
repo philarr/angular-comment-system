@@ -1,6 +1,6 @@
 .scoring {
     float: left;
-    width: 3rem;
+    width: 3em;
     margin: 0 1.5%;
     color: #b0b0b0;
     &:hover {
@@ -14,13 +14,12 @@
     -webkit-user-select: none;
     user-select: none;
 
-    padding-right: 1rem;
+    padding-right: 1em;
 }
 .scoring-up {
     text-align: center;
  
 }
 .scoring-number {
-    font-size: 1.25rem;
-    line-height: 2rem;
+    font-size: 1.25em;
 }

@@ -8,15 +8,65 @@
     cursor: pointer;
 }
 
-body {
-    font-family: 'Arial';
-    background-color: #d8d8d8;
-    padding: 0.5rem;
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: middle;
+  margin-top: -3px;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
 
+
+body {
+    font-family: 'Roboto';
+    background-color: #eaeaea;
+    width: 100%;
+    min-height: 100%;
+}
+
+.container {
+ 
+  width: 100%;
+  min-height: 100%;
+}
+
+
+ 
+
 main {
-    max-width: 1200px;
+ background-image: url('../img/gray-bg.png');
+ background-size: 150%;
+ background-size: contain;
+
+  .content {
+    display: table;
+    padding: 1rem;    
     margin: auto;
+    margin-top: -4rem;
+    max-width: 1240px;
+    width: 100%;
+    animation-name: fadeInUp;
+    animation-duration: 700ms;
+    animation-fill-mode: both;
+  }
 }
 
 h1,h2,h3,h4,h5 {
@@ -33,8 +83,13 @@ p {
 }
 
 a {
-    color: #555555;
+    line-height: 160%;
+    color: #777;
     text-decoration: none;
+    transition: color 350ms;
+    &:hover {
+      color: #c0c0c0;
+    }
 }
 
 li {
@@ -53,4 +108,13 @@ li {
   width: 1.5rem;
   animation: spin .6s infinite linear;
 }
+
+.wrapper {
+    max-width: 1240px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+footer {
  
+}
